@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ManuTech - Área do Funcionário</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link href="funcionario.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+
+<body>
+
+  <div id="modal-imagem" class="modal-imagem" onclick="fecharModalImagem()">
+  <img id="imagem-ampliada" alt="Imagem ampliada" />
+</div>
+  <video autoplay muted loop id="video-fundo-funcionario">
+    <source src="AGT.mp4" type="video/mp4" />
+    Seu navegador não suporta vídeo.
+  </video>
+
+  <header>
+    <h2><i class="fas fa-user me-2"></i>Área do Funcionário - ManuTech</h2>
+    <p>Registre e visualize os problemas técnicos</p>
+  </header>
+
+  <main role="main" aria-label="Área do funcionário - registros de problemas" class="main-container">
+    <section id="comunicados-funcionario" class="mb-5">
+      <h3>Comunicados do Administrador</h3>
+      <!-- Os comunicados serão inseridos via JS aqui -->
+    </section>
+    <h3 class="mb-4 text-center">Painel de Problemas Registrados</h3>
+    <ul id="painel-list" class="list-group-gap"></ul>
+
+    <hr class="my-5" />
+
+    <h3 class="mb-4 text-center">Registrar Novo Problema</h3>
+    <form id="problem-form" novalidate>
+      <label for="input-nome">Nome <span class="required">*</span></label>
+      <input type="text" id="input-nome" required />
+
+      <label for="input-depto">Departamento <span class="required">*</span></label>
+      <input type="text" id="input-depto" required />
+
+      <label for="input-desc">Descrição <span class="required">*</span></label>
+      <textarea id="input-desc" rows="4" required></textarea>
+
+      <label for="input-img">Anexar Imagem <span class="required">*</span></label>
+      <input type="file" accept="image/*" id="input-img" />
+
+      <img id="img-preview" alt="Prévia da imagem" />
+
+      <button type="submit" class="btn-enviar">Enviar</button>
+    </form>
+
+    <div class="logout-container">
+      <a href="logout.html" class="btn-sair-custom">Sair da Área de Funcionário</a>
+    </div>
+  </main>
+
+  <footer>
+    <div>&copy; 2025 ManuTech - Sistema de Gestão Interna</div>
+    <small></small>
+  </footer>
+
+  <script src="funcionario.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Login — ManuTech</title>
+  <link rel="stylesheet" href="login.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+  <video autoplay muted loop id="video-fundo-login">
+    <source src="NAT.mp4" type="video/mp4" />
+    Seu navegador não suporta vídeo.
+  </video>
+
+  <header>
+    <h2><i class="fas fa-cogs me-2"></i>ManuTech</h2>
+    <p>Otimize a gestão com segurança</p>
+  </header>
+
+  <main role="main" aria-label="Área de autenticação da ManuTech">
+    <h1>Login</h1>
+    <p class="subtitle">Entre como funcionário ou administrador</p>
+
+    <form id="login-panel" novalidate>
+      <label for="login-email">Email</label>
+      <input type="email" id="login-email" name="email" required autocomplete="username" />
+
+      <div class="login-buttons">
+        <button type="button" class="btn-home" onclick="voltarParaInicio()">Página Inicial</button>
+        <button type="button" class="btn-user" onclick="entrarComoUsuario()">Entrar como Funcionário</button>
+        <button type="button" class="btn-admin" onclick="entrarComoAdmin()">Entrar como Administrador</button>
+      </div>
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 ManuTech - Sistema de Gestão Interna</p>
+  </footer>
+
+  <script src="login.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,330 @@
+:root {
+  --primary: #00cfff;
+  --dark-blue: #001a33;
+  --light: #f4f9ff;
+  --bg-dark: #000;
+  --bg-main: #0f1a2b;
+  --text-light: #ddd;
+  --text-white: #fff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body, main, header, footer {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+
+header, footer {
+  color: var(--text-white);
+  width: 100%;
+  display: block;
+}
+
+#video-fundo-funcionario {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+header {
+  background-color: var(--dark-blue);
+  padding: 2rem 1rem;
+  text-align: center;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(6px);
+}
+
+header h2 {
+  margin: 0;
+  font-weight: 700;
+  font-size: 2rem;
+  color: var(--text-white);
+}
+
+header p {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  color: var(--text-light);
+  font-weight: 500;
+}
+
+main.main-container {
+  max-width: 2000px;
+  margin: 3rem auto 4rem;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 2.5rem 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+  text-align: left;
+  color: var(--text-white);
+  backdrop-filter: blur(10px);
+}
+
+h3, h4 {
+  color: var(--primary);
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+#comunicados-funcionario {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(0, 204, 255, 0.3);
+  padding: 2.5rem;
+  border-radius: 1.2rem;
+  margin-bottom: 3rem;
+  color: var(--text-white);
+  box-shadow: 0 4px 25px rgba(0, 204, 255, 0.3);
+  backdrop-filter: blur(10px);
+  text-align: center;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#comunicados-funcionario h3 {
+  font-size: 1.8rem;
+  color: var(--primary);
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+#comunicados-funcionario p {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-white);
+  margin-bottom: 1.5rem;
+}
+
+#comunicados-funcionario img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  max-height: 260px;
+  border-radius: 0.7rem;
+  object-fit: cover;
+  box-shadow: 0 0 15px rgba(0, 204, 255, 0.4);
+}
+
+.list-group-gap {
+  padding-left: 0;
+  list-style: none;
+}
+
+.list-group-gap > * {
+  margin-bottom: 1.5rem;
+}
+
+#painel-list {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(0, 204, 255, 0.3);
+  padding: 2.5rem;
+  border-radius: 1.2rem;
+  margin-bottom: 3rem;
+  color: var(--text-white);
+  box-shadow: 0 4px 25px rgba(0, 204, 255, 0.3);
+  backdrop-filter: blur(10px);
+  text-align: center;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  list-style: none;
+}
+
+#painel-list > li {
+  background-color: rgba(0, 0, 0, 0.45);
+  border-radius: 0.75rem;
+  padding: 2rem;
+  box-shadow: 0 0 10px rgba(0, 204, 255, 0.4);
+  min-height: 250px;
+  color: var(--text-white);
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#painel-list img {
+  max-width: 100%;
+  max-height: 200px;
+  border-radius: 0.7rem;
+  margin-top: 1rem;
+  object-fit: cover;
+  box-shadow: 0 0 12px rgba(0, 204, 255, 0.4);
+}
+
+form#problem-form {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(0, 204, 255, 0.3);
+  padding: 2.5rem;
+  border-radius: 1.2rem;
+  margin-top: 3rem;
+  color: var(--text-white);
+  box-shadow: 0 4px 25px rgba(0, 204, 255, 0.3);
+  backdrop-filter: blur(10px);
+  text-align: center;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+form#problem-form label {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: var(--text-light);
+  text-align: left;
+}
+
+form#problem-form input[type="text"],
+form#problem-form textarea,
+form#problem-form input[type="file"] {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: var(--text-white);
+  border-radius: 1rem;
+  padding: 1rem 1.5rem;
+  font-size: 1.1rem;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  outline: none;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+form#problem-form input[type="text"]:focus,
+form#problem-form textarea:focus,
+form#problem-form input[type="file"]:focus {
+  box-shadow: 0 0 10px 3px var(--primary);
+  background-color: rgba(255, 255, 255, 0.15);
+  border: 1px solid var(--primary);
+}
+
+form#problem-form textarea {
+  resize: vertical;
+}
+
+#img-preview {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  max-height: 180px;
+  border-radius: 0.5rem;
+  object-fit: cover;
+  box-shadow: 0 0 12px rgba(0, 204, 255, 0.4);
+}
+
+.btn-enviar {
+  background-color: var(--primary);
+  border: none;
+  padding: 0.85rem;
+  border-radius: 0.7rem;
+  color: var(--text-white);
+  font-weight: 700;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.btn-enviar:hover {
+  opacity: 0.9;
+}
+
+.logout-container {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.btn-sair-custom {
+  background-color: #52677D;
+  color: var(--text-white);
+  border: none;
+  padding: 0.75rem 3rem;
+  font-weight: 700;
+  border-radius: 0.6rem;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.btn-sair-custom:hover {
+  background-color: #004080;
+  color: var(--text-white);
+  text-decoration: none;
+}
+
+.required {
+  color: #ff6b6b;
+  font-weight: 700;
+}
+
+hr.my-5 {
+  border-color: rgba(0,204,255,0.4);
+  margin: 3rem 0;
+}
+
+footer {
+  background-color: var(--dark-blue);
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 0.95rem;
+  color: var(--text-white);
+  position: relative;
+  z-index: 2;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(6px);
+  width: 100%;
+  display: block;
+}
+
+.card-problema img {
+  max-width: 200px;
+  height: auto;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: transform 0.3s;
+}
+
+.card-problema img:hover {
+  transform: scale(1.03);
+}
+
+.modal.mostrar {
+  display: flex !important;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999; /* muito alto para sobrepor tudo */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.modal-conteudo {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+  box-shadow: 0 0 20px white;
+  cursor: zoom-out;
+  object-fit: contain;
+}

@@ -1,0 +1,118 @@
+/* Fonte principal */
+body {
+  margin: 0;
+  font-family: 'Outfit', sans-serif;
+  background-color: #121217; /* fundo escuro */
+  color: #f0f0f0;
+  line-height: 1.8;
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 120px;
+  background: linear-gradient(to bottom, rgba(18, 18, 23, 0) 0%, #121217 100%);
+  pointer-events: none;
+  z-index: 2;
+}
+
+#bg-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+}
+
+.about-container {
+  max-width: 1200px;
+  margin: 3rem auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center; /* centraliza horizontalmente */
+}
+
+/* Caixa de texto escura translúcida */
+.about-text {
+  flex: 1 1 700px; /* largura base maior */
+  min-width: 600px;
+  padding: 3rem;
+  background-color: rgba(20, 20, 30, 0.85);
+  border-radius: 1rem;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(6px);
+  color: #f0f0f0;
+  line-height: 1.8;
+}
+
+.about-text h2 {
+  font-size: 4.5rem;
+  color: #3ad8e9;
+  margin-bottom: 1.5rem;
+}
+
+.about-text p {
+  font-size: 1.6rem;
+  color: #e0e0e0;
+  margin-bottom: 1.5rem;
+}
+
+.botao-login-wrapper {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.botao-login {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background-color: #3ad8e9;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  font-size: 1.25rem;
+  transition: background-color 0.3s ease;
+}
+
+.botao-login:hover {
+  background-color: #005f99;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .about-text {
+    flex: 1 1 100%;
+    min-width: auto;
+    padding: 2rem 1.5rem;
+  }
+}
+
+footer {
+  text-align: center;
+  padding: 1.5rem 1rem;
+  font-size: 1.5rem;      /* maior que antes */
+  color: #ccc;
+  background-color: #1a1a28;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  box-shadow: inset 0 1px 3px rgba(255, 255, 255, 0.1);
+}
+
+
